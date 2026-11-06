@@ -135,7 +135,7 @@ function App() {
         <div className="brand-lockup">
           <div className="brand-mark"><Sparkles size={17} strokeWidth={2.1} /></div>
           <span>the group<span className="brand-light"> hub</span></span>
-          <span className="beta-pill">SPACE</span>
+          <span className="beta-pill public-pill">PUBLIC</span>
         </div>
 
         <div className="workspace-label">YOUR SPACE <ChevronDown size={13} /></div>
@@ -152,7 +152,7 @@ function App() {
         </div>
 
         <div className="sidebar-bottom">
-          <div className="sidebar-note"><span className="note-icon"><Sparkles size={14} /></span><span>A little corner<br />of the internet, just us.</span></div>
+        <div className="sidebar-note"><span className="note-icon"><Sparkles size={14} /></span><span>A little corner<br />of the internet to share.</span></div>
           <div className="profile-switcher">
             <span className="avatar avatar-small" style={{ '--member-color': activeMember.color, '--member-tint': activeMember.tint } as React.CSSProperties}>{activeMember.initials}</span>
             <div className="profile-copy"><strong>{currentUser}</strong><span>Here with the group</span></div>
@@ -164,20 +164,20 @@ function App() {
       <section className="chat-panel">
         <header className="topbar">
           <div className="breadcrumb"><span>your space</span><span className="crumb-slash">/</span><strong><Hash size={15} /> the-lounge</strong></div>
-          <div className="topbar-actions"><div className="online-people"><span className="online-stack">{members.map((member) => <span key={member.name} style={{ '--member-color': member.color, '--member-tint': member.tint } as React.CSSProperties}>{member.initials}</span>)}</span><span>4 members</span></div><span className="topbar-divider" /><button className="help-button" onClick={() => setNoticeOpen(!noticeOpen)} aria-label="About this space"><CircleHelp size={18} /></button></div>
+          <div className="topbar-actions"><div className="online-people"><span className="online-stack">{members.map((member) => <span key={member.name} style={{ '--member-color': member.color, '--member-tint': member.tint } as React.CSSProperties}>{member.initials}</span>)}</span><span>4 profiles</span></div><span className="topbar-divider" /><button className="help-button" onClick={() => setNoticeOpen(!noticeOpen)} aria-label="About this space"><CircleHelp size={18} /></button></div>
         </header>
 
         <div className="channel-intro">
           <div className="intro-icon"><Hash size={25} /></div>
           <div className="intro-copy"><div className="eyebrow">A GOOD PLACE TO START</div><h1>the-lounge</h1><p>For the plans, the laughs, and everything in between.</p></div>
-          <div className="intro-date"><Clock3 size={13} /> your shared space</div>
+          <div className="intro-date"><Clock3 size={13} /> public-link chat</div>
         </div>
 
         {noticeOpen && <div className="access-notice"><div><strong>Quick heads-up</strong><p>This is a public-link space. The member picker is just a name label, not a sign-in. Anyone with this site link can view and post in the chat.</p></div><button className="tiny-icon" onClick={() => setNoticeOpen(false)} aria-label="Dismiss"><X size={16} /></button></div>}
 
         <div className="message-list" ref={messageListRef} onScroll={onScroll}>
           <div className="history-marker"><span /> THIS IS THE START OF SOMETHING <span /></div>
-          <div className="welcome-message"><div className="welcome-emoji">✳</div><h2>Welcome to the lounge</h2><p>This is where the group gets together. Drop a hello, share a thought, or make a plan.</p><div className="welcome-tags"><span><Users size={13} /> just the four of you</span><span><MessageCircle size={13} /> say what’s up</span></div></div>
+          <div className="welcome-message"><div className="welcome-emoji">✳</div><h2>Welcome to the lounge</h2><p>This is where the group gets together. Drop a hello, share a thought, or make a plan.</p><div className="welcome-tags"><span><Users size={13} /> four familiar names</span><span><MessageCircle size={13} /> say what’s up</span></div></div>
           {loading && <div className="loading-state"><span className="spinner" /> Gathering the conversation…</div>}
           {!loading && messages.length > 0 && <div className="date-divider"><span>THE CONVERSATION</span></div>}
           {!loading && messages.map((message, index) => {

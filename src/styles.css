@@ -26,6 +26,7 @@ button:focus-visible, textarea:focus-visible { outline: 2px solid rgba(214,193,1
 .brand-mark { display: inline-grid; width: 25px; height: 25px; place-items: center; color: #1b1b16; background: #d4bea0; border-radius: 8px; }
 .brand-light { color: #a49f91; font-weight: 500; }
 .beta-pill { margin-left: auto; padding: 4px 6px; color: #8c897d; border: 1px solid rgba(218,213,202,.11); border-radius: 4px; font: 700 8px 'DM Sans',sans-serif; letter-spacing: .9px; }
+.public-pill { color: #c9aa80; border-color: rgba(201,170,128,.25); background: rgba(201,170,128,.07); }
 .workspace-label { display: flex; align-items: center; gap: 7px; margin: 49px 8px 10px; color: #74766d; font-size: 9px; font-weight: 700; letter-spacing: 1.15px; }
 .workspace-label svg { color: #56584f; }
 .room-item { display: flex; align-items: center; width: 100%; gap: 10px; border: 0; border-radius: 6px; padding: 10px 10px; background: transparent; text-align: left; color: #b4b2a9; font-size: 12px; cursor: pointer; }
